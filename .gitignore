@@ -1,0 +1,18 @@
+# ── Project-level .gitignore ──
+
+# Gradle build outputs
+.gradle/
+build/
+
+# IDE files (Android Studio / IntelliJ)
+.idea/
+*.iml
+local.properties
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Signing keys (never commit these!)
+*.jks
+*.keystore

@@ -1,0 +1,62 @@
+// build.gradle (app-level)
+// This is where we configure the Android app and declare all dependencies.
+
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.tableorder'
+    compileSdk 34                  // Compile against API 34
+
+    defaultConfig {
+        applicationId "com.tableorder"
+        minSdk 24                  // Minimum Android 7.0
+        targetSdk 34               // Target API 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    // ViewBinding generates a binding class for each XML layout,
+    // so we never need findViewById() — safer and cleaner.
+    buildFeatures {
+        viewBinding true
+    }
+
+    // Use Java 11 language features (var, etc.)
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                          'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    // ── AndroidX core ──────────────────────────────────────────
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+
+    // ── Lifecycle: ViewModel + LiveData (MVVM) ─────────────────
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.7.0'
+
+    // ── Gson: serialize data to JSON for SharedPreferences ─────
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    // ── ZXing: QR code scanning + generation ───────────────────
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+    implementation 'com.google.zxing:core:3.5.3'
+
+    // ── MPAndroidChart: bar charts on the dashboard ────────────
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+}

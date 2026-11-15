@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Vector drawable used as the launcher icon foreground.
+     A white "T" (for TableOrder) on a transparent background.
+     The 108dp canvas is required for adaptive icons (safe zone = inner 72dp). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- White letter "T" centered in the safe zone -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,30 L74,30 L74,40 L59,40 L59,78 L49,78 L49,40 L34,40 Z" />
+</vector>

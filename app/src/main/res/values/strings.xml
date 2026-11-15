@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- strings.xml — all user-visible text in one place for easy translation -->
+<resources>
+    <string name="app_name">TableOrder</string>
+    <string name="app_subtitle">QR Ordering for Restaurants &amp; Cafés</string>
+    <string name="choose_role">Choose your role</string>
+    <string name="role_client">I\'m a Client</string>
+    <string name="role_client_desc">Scan QR code, browse menu, place orders</string>
+    <string name="role_manager">I\'m a Manager</string>
+    <string name="role_manager_desc">Manage orders, stock, reviews &amp; dashboard</string>
+    <string name="app_footer">Demo mode — all data is stored locally on this device</string>
+</resources>

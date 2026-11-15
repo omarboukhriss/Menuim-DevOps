@@ -1,0 +1,7 @@
+// build.gradle (project-level)
+// This file declares Gradle plugins used across the project.
+// The actual app configuration is in app/build.gradle.
+
+plugins {
+    id 'com.android.application' version '8.2.0' apply false
+}

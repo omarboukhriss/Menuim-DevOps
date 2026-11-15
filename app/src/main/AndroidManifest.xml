@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- AndroidManifest.xml — declares the app, permissions, and ALL activities -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Camera permission for QR code scanning -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Camera is optional so the app still installs on devices without a camera -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TableOrder">
+
+        <!-- ══════════════════════════════════════════════════════
+             ENTRY POINT: Role selection (Client / Manager)
+             ══════════════════════════════════════════════════════ -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ══════════════════════════════════════════════════════
+             CLIENT SCREENS
+             ══════════════════════════════════════════════════════ -->
+        <activity android:name=".ui.client.ClientScanActivity"
+            android:exported="false" />
+        <activity android:name=".ui.client.ClientMenuActivity"
+            android:exported="false" />
+        <activity android:name=".ui.client.ClientOrderTrackingActivity"
+            android:exported="false" />
+        <activity android:name=".ui.client.ClientReviewActivity"
+            android:exported="false" />
+
+        <!-- ══════════════════════════════════════════════════════
+             MANAGER SCREENS
+             ══════════════════════════════════════════════════════ -->
+        <activity android:name=".ui.manager.ManagerPinActivity"
+            android:exported="false" />
+        <activity android:name=".ui.manager.ManagerHomeActivity"
+            android:exported="false" />
+        <activity android:name=".ui.manager.StockManagementActivity"
+            android:exported="false" />
+        <activity android:name=".ui.manager.AddEditMenuItemActivity"
+            android:exported="false" />
+        <activity android:name=".ui.manager.ManagerOrdersActivity"
+            android:exported="false" />
+        <activity android:name=".ui.manager.ManagerReviewsActivity"
+            android:exported="false" />
+        <activity android:name=".ui.manager.WaiterCallsActivity"
+            android:exported="false" />
+        <activity android:name=".ui.manager.DashboardActivity"
+            android:exported="false" />
+        <activity android:name=".ui.manager.QrGeneratorActivity"
+            android:exported="false" />
+
+    </application>
+</manifest>
